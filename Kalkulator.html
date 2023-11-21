@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style_kalkulator.css">
+</head>
+<body>
+
+    <nav>
+        <img src="image/logo.png" alt="">
+        <ul class="bar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="home.html#developer">Developer</a></li>
+            <li><a href="home.html#materi">Materi</a></li>
+            <li><a href="Kalkulator.html" class="Kalkulator">Kalkulator</a></li> 
+        </ul>
+    </nav>
+
+        <p class="penjelasan">input nilai dengan format ax^2+bx+c dengan a ≠ 0<br>jika ingin menggunakan angka satu(1) atau nol(0) di variabel maka tetap tulisakan angkanya <br> Contoh : 1x^2+0x-3</p>
+            <form>
+                <input type="text" class="input-text" placeholder="Masukkan persamaan :" id="input_persamaan">
+                <button for="input-text" id="submit"class="submit">Hitung</button>
+            </form>
+        <div class="content" id="content">
+            <div id ="plotly-chart" class="plot"></div> 
+            <div class="sumbu_x">
+                <p id="sumbu-x"></p>
+                <p id="sumbu-x2"></p>
+                <p id="sumbu-x3"></p>
+            </div>
+            <p id="sumbu-y"  class="sumbu_y"></p>
+            <div class="diskriminant">
+                <p id="Diskriminan"></p>
+                <p id="Diskriminan_2"></p>
+            </div>
+            <div class="extream">
+                <p id="xtream"></p>
+                <p id="xtream_xp"></p>
+                <p id="xtream_yp"></p>
+            </div>
+            <div class="keterangan">
+                <p id="ket_a"></p>
+                <p id="ket_b"></p>
+                <p id="ket_c"></p>
+            </div>
+        </div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src= "kalkulus.js"></script>
+</body>
+</html>

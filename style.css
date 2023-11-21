@@ -1,0 +1,208 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+.home{
+    width:100%;
+    min-height: 100vh;
+    background-image: url(image/bekron.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 100px;
+}
+nav img{
+    width: 250px;
+    color: #e49ab0;
+    position: relative;
+    right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #e49ab0;
+    margin-right: 15px;
+    font-weight: 400;
+}
+.bar{
+    margin-right:300px ;
+} 
+.Kalkulator{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fdfff7;
+    background-image: linear-gradient(45deg, #e49ab0,rgb(172, 89, 116));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+.content{
+    margin-top: 15%;
+    max-width: 500px;
+    color: #36454f;
+    position: relative;
+    bottom: 200px;
+}
+.content h1{
+    font-size: 45px;
+}
+.content p{
+    margin: 10px 0 30px;
+    animation-delay: 0.5s;
+}
+.content .Kalkulator{
+    padding : 10px 40px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+.Kalkulator:hover{
+    border-top-right-radius: 30px;
+    padding: 7px 25px;
+    opacity: 0.9;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.materi{
+    width: 100%;
+    height: 180vh;
+    display: flex;
+    background-color:#e49ab0;
+    justify-content: center;
+    color: #fdfff7;
+}
+.materi .materi_dasar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    bottom: 420px;
+    left: 450px;
+}
+.materi .materi_dasar p{
+    width: 350px;
+}
+.materi .materi_kurva{
+    position: relative;
+    top: 350px;
+    right: 400px;
+    text-align: center;
+    max-width: 100%;
+}
+.materi .materi_kurva h1{
+    position: relative;
+    left: 250px;
+}
+.materi_kurva .koe_A img{
+    width: 250px ;
+}
+.materi_kurva .koe_A{
+    position: relative;
+    right: 200px;
+    top: 5px;
+}
+.materi_kurva .koe_B img{
+    width: 250px ;
+}
+.materi_kurva .koe_B p{
+    max-width: 900px ;
+    width: 550px;
+}
+.materi_kurva .koe_B{
+    position: relative;
+    bottom: 250px;
+    left: 250px;
+}
+.materi_kurva .konst_C img{
+    width: 350px ;
+}
+.materi_kurva .konst_C p{
+    max-width: 900px ;
+    width: 550px;
+}
+.materi_kurva .konst_C{
+    position: relative;
+    bottom: 550px;
+    left: 700px;
+}
+.diskriminan img{
+    width: 300px ;
+}
+.diskriminan h3{
+    position: relative;
+    left: 100px;
+}
+.diskriminan{
+    position: relative;
+    top: 750px;
+    right: 580px;
+}
+.diskriminan p{
+    width: 400px;
+}
+.developer{
+    width:100%;
+    height: 18cm;
+    background-image: url(image/background.jpeg);
+    background-position: center;
+    background-size:auto;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+.developer .aida {
+    width: 450px;
+    position: relative;
+    top: 0px;
+    right: 130px;
+}
+.developer .ikhwan {
+    width: 450px;
+    position: relative;
+    top: 0px;
+    right: 130px;
+}
+.developer .rosi {
+    width: 450px;
+    position: relative;
+    left: 730px;
+    bottom: 570px;
+}
+.developer .text{
+    font-size: 40px;
+    color: #fdfff7;
+    position: relative;
+    left: 450px;
+    text-shadow: #fdfff7;
+}
+.developer .text2{
+    position: relative;
+    bottom: 600px;
+    left: 300px;
+    color: #fdfff7;
+}
