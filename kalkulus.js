@@ -108,7 +108,7 @@ button.addEventListener("click" ,function(e){
     x2=cekbilangan(x2);
 
     //menampilkan hasil nilai x beserta caranya
-    if (Number.isInteger((x1) && (x2))){
+    if (Number.isInteger((x1) || (x2))){
         tampil_sumbu_x.innerHTML=('Mencari Nilai Sumbu-X <br>mencari nilai x dengan syarat y=0 <br> untuk mencari nilai x kita akan menggunakan faktor')
         if ((a >1) || (a<0)){
             tampil_sumbu_x2.innerHTML=("cari 2 angka yang jika dikalikan menghasilkan nilai c ")
