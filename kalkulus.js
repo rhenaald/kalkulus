@@ -14,10 +14,12 @@ var tampil_xtream_yp = document.querySelector('#xtream_yp')
 var tampil_ket_a = document.querySelector('#ket_a')
 var tampil_ket_b = document.querySelector('#ket_b')
 var tampil_ket_c = document.querySelector('#ket_c')
+const content = document.querySelector(".display")
 
 button.addEventListener("click" ,function(e){
     console.log("oke");
     e.preventDefault()
+    content.classList.remove("display")
     //ngambil persamaan dari user 
     var persamaan = input.value;
     var data1=persamaan.split("x^2");
