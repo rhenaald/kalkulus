@@ -86,7 +86,7 @@ button.addEventListener("click" ,function(e){
         persamaan= ("fungsi kuadrat : "+persamaan)
     };
 
-    //mencari nilai sumbu x dengan menggunakan 2 cara
+    //mencari nilai sumbu x 
     var q = -4*a*c; //variabel q dibuat untuk memudahkan dalam perhirtungan dan pengkondisian
     if (q >0 )
         {var x1 = (Math.sqrt(b**2 + q ))}
@@ -108,49 +108,15 @@ button.addEventListener("click" ,function(e){
     x2=cekbilangan(x2);
 
     //menampilkan hasil nilai x beserta caranya
-    if (Number.isInteger((x1) && (x2))){
-        tampil_sumbu_x.innerHTML=('Mencari Nilai Sumbu-X <br>mencari nilai x dengan syarat y=0 <br> untuk mencari nilai x kita akan menggunakan faktor')
-        if ((a >1) || (a<0)){
-            tampil_sumbu_x2.innerHTML=("cari 2 angka yang jika dikalikan menghasilkan nilai c ")
-            if ((x1 > 0) && (x2 >0)){
-                tampil_sumbu_x3.innerHTML=("("+a+"x -"+(x1*a)+") (x -"+x2+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan <br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-            else if ((x1 > 0) && (x2 < 0)){
-                tampil_sumbu_x3.innerHTML=("("+a+"x -"+(x1*a)+") (x +"+(-x2)+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-            else if ((x1 < 0) && (x2 > 0)){
-                tampil_sumbu_x3.innerHTML=("("+a+"x +"+(-(x1*a))+") (x -"+x2+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-            else if ((x1 < 0) && (x2 < 0)){
-                tampil_sumbu_x3.innerHTML=("("+a+"x  "+(-(x1*a))+") (x +"+(-x2)+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-        else{
-            tampil_sumbu_x2.innerHTML=("cari 2 angka yang jika dikalikan menghasilkan nilai c dan jika dtambahkan menghasilkan nilai b")
-            if ((x1 > 0) && (x2 >0)){
-                tampil_sumbu_x3.innerHTML=("(x -"+x1+") (x -"+x2+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-            else if ((x1 > 0) && (x2 < 0)){
-                tampil_sumbu_x3.innerHTML=("(x -"+x1+") (x +"+(-x2)+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-            else if ((x1 < 0) && (x2 > 0)){
-                tampil_sumbu_x3.innerHTML=("(x +"+(-x1)+") (x -"+x2+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-            else if ((x1 < 0) && (x2 < 0)){
-                tampil_sumbu_x3.innerHTML=("(x  "+(-x1)+") (x +"+(-x2)+")<br>pindahkan angka pada x1 dan x2 ke ruas kanan<br>x1 = "+ x1+"<br>x2 = "+ x2)
-            }
-        };
+
+    tampil_sumbu_x.innerHTML=('Mencari Nilai Sumbu-X <br>untuk mencari nilai x kita akan menggunakan rumus ABC')
+    tampil_sumbu_x2.innerHTML=("Rumus : -b  ± √b² -4 * a * c /2 *a<br>-"+b+ " ± √"+b+"² -4 * "+a+ " * "+c +" /2 * "+a)
+    if (q >0 ){
+        tampil_sumbu_x3.innerHTML=("-"+b+ " ± √"+b**2+" + "+q+" /2 *"+a+"<br>-"+b+ " ± √"+(b**2+q)+" /"+2*a+"<br>x1 = "+x1+"<br>x2 = "+x2)
         }
-    }
-    else{
-        tampil_sumbu_x.innerHTML=('Mencari Nilai Sumbu-X <br>untuk mencari nilai x kita akan menggunakan rumus ABC')
-        tampil_sumbu_x2.innerHTML=("Rumus : -b  ± √b² -4 * a * c /2 *a<br>-"+b+ " ± √"+b+"² -4 * "+a+ " * "+c +" /2 * "+a)
-        if (q >0 ){
-            tampil_sumbu_x3.innerHTML=("-"+b+ " ± √"+b**2+" + "+q+" /2 *"+a+"<br>-"+b+ " ± √"+(b**2+q)+" /"+2*a+"<br>x1 = "+x1+"<br>x2 = "+x2)
+    else if (q < 0 ){
+        tampil_sumbu_x3.innerHTML=("-"+b+ " ± √"+b**2+" + "+q+" /2 *"+a+"<br>-"+b+ " ± √"+(b**2-q)+" /"+ (2*a)+"<br>x1 = "+x1+"<br>x2 = "+x2)
         }
-        else if (q < 0 ){
-            tampil_sumbu_x3.innerHTML=("-"+b+ " ± √"+b**2+" + "+q+" /2 *"+a+"<br>-"+b+ " ± √"+(b**2-q)+" /"+ (2*a)+"<br>x1 = "+x1+"<br>x2 = "+x2)
-            }
-    };
 
     //menentukan nilai y 
     tampil_sumbu_y.innerHTML=("mencari nilai y dengan syarat x=0 <br>nilai y = "+c);
