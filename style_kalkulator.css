@@ -153,3 +153,6 @@ nav ul li a{
     top: 650px;
     opacity: 1;
 }
+.display{
+    display: none;
+}
