@@ -88,10 +88,7 @@ button.addEventListener("click" ,function(e){
 
     //mencari nilai sumbu x 
     var q = -4*a*c; //variabel q dibuat untuk memudahkan dalam perhirtungan dan pengkondisian
-    if (q >0 )
-        {var x1 = (Math.sqrt(b**2 + q ))}
-    else if (q <0 )
-        {var x1 = (Math.sqrt(b**2 - q ))};
+    var x1 = Math.sqrt(b**2 + q ) // q = -4*a*c dan sudah dihitung jadi rumusnya menggunakan +,karena jika q positif maka akan di tambah dan q negatif tetap di kurang
     var x2 = x1
     var  x1 =(-b + x1)/(2*a)
     var x2 =(-b - x2)/(2*a)
@@ -110,22 +107,19 @@ button.addEventListener("click" ,function(e){
     //menampilkan hasil nilai x beserta caranya
 
     tampil_sumbu_x.innerHTML=('Mencari Nilai Sumbu-X <br>untuk mencari nilai x kita akan menggunakan rumus ABC')
-    tampil_sumbu_x2.innerHTML=("Rumus : -b  ± √b² -4 * a * c /2 *a<br>-"+b+ " ± √"+b+"² -4 * "+a+ " * "+c +" /2 * "+a)
+    tampil_sumbu_x2.innerHTML=("Rumus : -b  ± √b² -4 * a * c /2 *a<br>-("+b+ ") ± √"+b+"² -4 * "+a+ " * "+c +" /2 * "+a)
     if (q >0 ){
-        tampil_sumbu_x3.innerHTML=("-"+b+ " ± √"+b**2+" + "+q+" /2 *"+a+"<br>-"+b+ " ± √"+(b**2+q)+" /"+2*a+"<br>x1 = "+x1+"<br>x2 = "+x2)
+        tampil_sumbu_x3.innerHTML=("-("+b+ ") ± √"+b**2+" + "+q+" /2 *"+a+"<br>-("+b+ ") ± √"+(b**2+q)+" /"+2*a+"<br>x1 = "+x1+"<br>x2 = "+x2)
         }
     else if (q < 0 ){
-        tampil_sumbu_x3.innerHTML=("-"+b+ " ± √"+b**2+" + "+q+" /2 *"+a+"<br>-"+b+ " ± √"+(b**2-q)+" /"+ (2*a)+"<br>x1 = "+x1+"<br>x2 = "+x2)
+        tampil_sumbu_x3.innerHTML=("-("+b+ ") ± √"+b**2+" "+q+" /2 *"+a+"<br>-("+b+ ") ± √"+(b**2-q)+" /"+ (2*a)+"<br>x1 = "+x1+"<br>x2 = "+x2)
         }
 
     //menentukan nilai y 
     tampil_sumbu_y.innerHTML=("mencari nilai y dengan syarat x=0 <br>nilai y = "+c);
 
     //menentukan nilai diskriminan
-    if (q >0 )
-        {var d = (b**2 + q )}
-    else if (q <0 )
-        {var d = (b**2 - q )};
+    var d = (b**2 + q ) // q = -4*a*c dan sudah dihitung jadi rumusnya menggunakan +,karena jika q positif maka akan di tambah dan q negatif tetap di kurang
     tampil_Diskriminan.innerHTML=("Mencari nIlai diskriminan<br>rumus : D = b² - 4 * a *c<br>D = "+b+"² - 4 *"+a+ "*"+c+"<br>D = "+d);
     if (d > 0){tampil_Diskriminan_2.innerHTML=("nilai D > 0 maka :<br>kurva memotong sumbu x di 2 titik")}
     else if (d < 0){tampil_Diskriminan_2.innerHTML=("nilai D < 0 maka :<br>kurva tidak memotong sumbu x")}
@@ -135,14 +129,11 @@ button.addEventListener("click" ,function(e){
     tampil_xtream.innerHTML = ("mencari nilai extream")
     var xp = -b / (2*a);
     xp=cekbilangan(xp)
-    tampil_xtream_xp.innerHTML= ("sumbu simetris/xp<br>rumus xp = -b/2a<br>xp = -"+b+" /2* "+a+"<br>xp = "+xp);
+    tampil_xtream_xp.innerHTML= ("sumbu simetris/xp<br>rumus xp = -b/2a<br>xp = -("+b+") /2* "+a+"<br>xp = "+xp);
 
-    if (q >0 )
-        {var yp = ((b**2 + q )/(-4*a))}
-    else if (q <0 )
-        {var yp = ((b**2 - q )/(-4*a))};
+    var yp = ((b**2 + q )/(-4*a))
     yp=cekbilangan(yp)
-    tampil_xtream_yp.innerHTML=("Mencari nIlai maximum/minimum<br>yp = "+b+"² - 4 *"+a+ "*"+c+"/4 * "+a+"<br>yp= "+yp);
+    tampil_xtream_yp.innerHTML=("Mencari nIlai maximum/minimum<br>yp = "+b+"² - 4 *"+a+ "*"+c+"/-4 * "+a+"<br>yp= "+yp);
 
     //keterangan tambahan
     if (a > 0){tampil_ket_a.innerHTML=("a = " +a+", a > 0, maka :<br>kurva buka ke atas")}
@@ -202,7 +193,7 @@ button.addEventListener("click" ,function(e){
     title:persamaan,
     xaxis:{
         title : 'koordinat x',
-        range:[(Math.abs(x1*2)),(-Math.abs(x1*2))]
+        range:[(-Math.abs(x1*2)),(Math.abs(x1*2))]
     },
     yaxis:{
         title : 'koordinat y',
