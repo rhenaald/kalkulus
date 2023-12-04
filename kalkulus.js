@@ -112,7 +112,7 @@ button.addEventListener("click" ,function(e){
         tampil_sumbu_x3.innerHTML=("-("+b+ ") ± √"+b**2+" + "+q+" /2 *"+a+"<br>-("+b+ ") ± √"+(b**2+q)+" /"+2*a+"<br>x1 = "+x1+"<br>x2 = "+x2)
         }
     else if (q < 0 ){
-        tampil_sumbu_x3.innerHTML=("-("+b+ ") ± √"+b**2+" "+q+" /2 *"+a+"<br>-("+b+ ") ± √"+(b**2-q)+" /"+ (2*a)+"<br>x1 = "+x1+"<br>x2 = "+x2)
+        tampil_sumbu_x3.innerHTML=("-("+b+ ") ± √"+b**2+" "+q+" /2 *"+a+"<br>-("+b+ ") ± √"+(b**2+q)+" /"+ (2*a)+"<br>x1 = "+x1+"<br>x2 = "+x2)
         }
 
     //menentukan nilai y 
